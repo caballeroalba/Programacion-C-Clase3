@@ -1,7 +1,50 @@
 #include "concesionario.h"
-
-int main(void)
+#include <stdio.h>
+#include <getopt.h>
+int main(int argc, char *argv[])
 {
+  int val, option_index= 0;
+  static struct option long_options[]=
+  {
+    {"matricula", required_argument,0,'m'},
+    {"id",required_argument,0,'i'},
+    {"gama",required_argument,0,'g'},
+    {"dueno",required_argument,0,'d'},
+    {"ayuda",optional_argument,0,'h'},
+    {0}
+  };
+
+  int i=0;
+  for (i=1; i<=argc, i++){
+    val=getopt_long(argc,argv,"m:i:g:d:h",long_options,&option_index);
+    if(val == -1)
+      return val;
+    switch(val){
+      case 'm':
+
+        break;
+      case 'i':
+
+        break;
+      case 'g':
+
+        break;
+
+      case 'd':
+
+        break;
+
+      case 'h':
+
+        break;
+      default:
+
+        break;
+
+    }
+  }
+
+
 	struct coche *c1, *c2;
 	struct concesionario *con;
 	char info[4000];

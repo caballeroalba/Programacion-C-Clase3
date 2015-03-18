@@ -3,12 +3,11 @@
 
 struct concesionario {
 	struct list_head	garaje;
-	const char        *dueno;
-	uint32_t          num_coches;
+	const char      	*dueno;
+	uint32_t		num_coches;
 
-	uint32_t		      flags;
+	uint32_t		flags;
 };
-
 
 struct concesionario *curso_concesionario_alloc(void)
 {
@@ -19,7 +18,7 @@ struct concesionario *curso_concesionario_alloc(void)
 		return NULL;
 
 	INIT_LIST_HEAD(&con->garaje);
-	
+
 	con->flags |= (1 << CURSO_CONCESIONARIO_ATTR_NUM_COCHES);
 
 	return con;

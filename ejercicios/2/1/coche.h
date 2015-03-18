@@ -5,23 +5,21 @@
 #include "list.h"
 
 enum {
-	CURSO_TAREA_ATTR_NOMBRE_TAREA = 0,
-	CURSO_TAREA_ATTR_DESC_TAREA,
-	CURSO_TAREA_ATTR_USUARIO,
-	CURSO_TAREA_ATTR_PRIORIDAD,
-	CURSO_TAREA_ATTR_ID,
-	__CURSO_TAREA_ATTR_MAX
+	CURSO_COCHE_ATTR_MARCA,
+	CURSO_COCHE_ATTR_MATRICULA,
+	CURSO_COCHE_ATTR_ID,
+	__CURSO_COCHE_ATTR_MAX
 };
 
-#define CURSO_TAREA_ATTR_MAX (__CURSO_TAREA_ATTR_MAX - 1)
+#define CURSO_COCHE_ATTR_MAX (__CURSO_COCHE_ATTR_MAX - 1)
 
 #define xfree(ptr)      free((void *)ptr);
 
 struct coche {
-	struct list_head  head;
+	struct list_head	head;
 	uint32_t		id;
-	const char  *matricula;
-	const char  *marca;
+	const char      	*matricula;
+	const char		*marca;
 
 	uint32_t		flags;
 };
