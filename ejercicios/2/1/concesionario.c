@@ -26,7 +26,7 @@ struct concesionario *curso_concesionario_alloc(void)
 
 void curso_concesionario_free(struct concesionario *con)
 {
-	int i;
+	
 	struct coche *c, *tmp;
 
 	if (con->flags & (1 << CURSO_CONCESIONARIO_ATTR_DUENO))
